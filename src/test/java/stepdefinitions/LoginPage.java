@@ -5,6 +5,8 @@ import org.testng.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import manager.ExtentManager;
+import manager.ExtentTestManager;
 import pageclasses.LoginPageClass;
 import pageclasses.SecureAreaPage;
 import pageclasses.WelcomeToTheInternet;
