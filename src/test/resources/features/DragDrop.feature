@@ -2,7 +2,7 @@
 Feature: Test DrapDrop Cases
 
 
-
+@medium
 @tag1
 Scenario:
 Verify that user can drag and drop

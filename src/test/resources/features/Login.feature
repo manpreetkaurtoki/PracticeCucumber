@@ -2,7 +2,7 @@
 Feature: Test Login Cases
 
 
-
+@high
 @tag1
 Scenario:
 Verify that user can login to application with correct credentials

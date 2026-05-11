@@ -10,6 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 		plugin = {"pretty",
 				"html:target/cucumber-report.html",
 				"json:target/report.json"},
+		tags = "@high",
 		dryRun = false,
 		publish= true
 		
