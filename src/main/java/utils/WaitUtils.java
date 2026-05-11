@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -30,5 +31,10 @@ public class WaitUtils {
 	public static WebElement visibilityOfElementLocated(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
-
+	public static WebElement find(By locator) {
+		return DriverManager.getDriver().findElement(locator);
+	}
+	public static Actions actions() {
+		return new Actions(DriverManager.getDriver());
+	}
 }
