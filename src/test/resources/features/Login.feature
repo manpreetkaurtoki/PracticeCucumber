@@ -1,15 +1,26 @@
-@tag
+@smoke
 Feature: Test Login Cases
 
 
-@high
-@tag1
-Scenario:
-Verify that user can login to application with correct credentials
+
+Background:
+
 Given user is on xyz site
 When user clicks on form auth
 Then user should land on login page
-When user enters username "tomsmit"
-And enter password "SuperSecretPassword!"
+
+@high
+@Login
+Scenario Outline:
+Verify credentials
+When user enters username "<username>"
+And enter password "<password>"
 And user clicks on Login button
-Then user should be successfully logged in
+Then user should see "<result>"
+
+ Examples:
+      | username  | password   			| result          |
+      | admin     | admin123   			| failure         |
+      | user1     | wrongpass  			| failure         |
+      | tomsmith  | SuperSecretPassword!| success         |
+      | testuser  | test123    			| failure         |

@@ -1,14 +1,18 @@
 package hooks;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.MediaEntityBuilder;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.Status;
 import manager.DriverManager;
 import manager.ExtentManager;
 import manager.ExtentTestManager;
@@ -35,16 +39,32 @@ public class Hooks {
 	}
 
 	@After
-	public void end(Scenario scenario) {
+	public void end(Scenario scenario)
+			throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException, IOException {
 		if (scenario.isFailed()) {
-
 			String errorMessage = scenario.getStatus().toString();
+			ExtentTestManager.log.fail("1 " + errorMessage);
+			Field delegate = scenario.getClass().getDeclaredField("delegate");
+			delegate.setAccessible(true);
+			Object testCaseState = delegate.get(scenario);
 
-			Throwable error = getError(scenario);
-			ExtentTestManager.log.fail("1 "+errorMessage); //print fail
-			ExtentTestManager.log.fail("2 "+error); //print null
-			ExtentTestManager.log.fail("3 "+error.getClass().getName()); // doesnt add
-		} else {
+			Field errorField = testCaseState.getClass().getDeclaredField("error");
+			errorField.setAccessible(true);
+			Throwable error = (Throwable) errorField.get(testCaseState);
+
+			ExtentTestManager.log.fail(error.getMessage(),
+					MediaEntityBuilder
+							.createScreenCaptureFromPath(BaseUtils.getScreenShotPath(DriverManager.getDriver(),
+									scenario.getClass().getName() + "." + scenario.getName()))
+							.build());
+
+		} else if (scenario.getStatus().equals(Status.SKIPPED)) {
+			ExtentTestManager.log.skip("Test Skipped");
+		}
+
+		else
+
+		{
 			ExtentTestManager.log.pass("Test Passed");
 		}
 
@@ -52,26 +72,6 @@ public class Hooks {
 		DriverManager.quitDriver();
 		System.out.println("entered in closing browser method");
 
-	}
-
-	private Throwable getError(Scenario scenario) {
-
-		try {
-
-			java.lang.reflect.Field field = scenario.getClass().getDeclaredField("delegate");
-
-			field.setAccessible(true);
-
-			Object delegate = field.get(scenario);
-
-			java.lang.reflect.Method method = delegate.getClass().getMethod("getError");
-
-			return (Throwable) method.invoke(delegate);
-
-		} catch (Exception e) {
-
-			return null;
-		}
 	}
 
 	@AfterAll

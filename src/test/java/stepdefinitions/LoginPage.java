@@ -49,10 +49,21 @@ public class LoginPage {
 		loginObj.clickLogin();
 	}
 
-	@Then("user should be successfully logged in")
-	public void user_should_be_successfully_logged_in() {
+	@Then("user should see {string}")
+	public void user_should_see(String result) {
 
-		secureObj = new SecureAreaPage();
-		Assert.assertEquals(secureObj.getText(), "Secure Area");
+		
+
+		switch (result.toLowerCase()) {
+		case "failure":
+			System.out.println("Fail");
+			break;
+			
+		case "success":
+			secureObj = new SecureAreaPage();
+			Assert.assertEquals(secureObj.getText(), "Secure Area");
+			break;
+
+		}
 	}
 }
