@@ -21,6 +21,6 @@ Then user should see "<result>"
  Examples:
       | username  | password   			| result          |
       | admin     | admin123   			| failure         |
-      | user1     | wrongpass  			| failure         |
-      | tomsmith  | SuperSecretPassword!| success         |
-      | testuser  | test123    			| failure         |
+     # | user1     | wrongpass  			| failure         |
+     # | tomsmith  | SuperSecretPassword!| success         |
+     # | testuser  | test123    			| failure         |

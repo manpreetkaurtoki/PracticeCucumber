@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-12T12:26:43 EDT" name="Default suite" finished-at="2026-05-12T12:27:18 EDT" duration-ms="34784">
+  <suite started-at="2026-05-12T12:30:19 EDT" name="Default suite" finished-at="2026-05-12T12:30:41 EDT" duration-ms="21664">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@5c5eefef]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-12T12:26:43 EDT" name="Default test" finished-at="2026-05-12T12:27:18 EDT" duration-ms="34784">
+    <test started-at="2026-05-12T12:30:19 EDT" name="Default test" finished-at="2026-05-12T12:30:41 EDT" duration-ms="21664">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:26:43 EDT" name="setUpClass" finished-at="2026-05-12T12:26:44 EDT" duration-ms="1137" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:30:19 EDT" name="setUpClass" finished-at="2026-05-12T12:30:21 EDT" duration-ms="1446" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6b321262]]>
+                <![CDATA[org.testng.TestRunner@4cffcc61]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:26:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-12T12:26:51 EDT" duration-ms="6481" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:30:21 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-12T12:30:39 EDT" duration-ms="17984" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,58 +34,38 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //h2[text()=' Secure Area'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()=' Secure Area']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.5', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.97 (6b3fa66a923a..., userDataDir: /var/folders/hp/xcf3qcdd4dl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59241}, goog:processID: 52591, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59241/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 880d32ed11501a29631da637a686c876]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h2[text()=' Secure Area'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()=' Secure Area']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.5', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.97 (6b3fa66a923a..., userDataDir: /var/folders/hp/xcf3qcdd4dl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59241}, goog:processID: 52591, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59241/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 880d32ed11501a29631da637a686c876
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+at utils.WaitUtils.visibilityOfElementLocated(WaitUtils.java:32)
+at utils.UiActionsUtils.getText(UiActionsUtils.java:11)
+at pageclasses.SecureAreaPage.getText(SecureAreaPage.java:11)
+at stepdefinitions.LoginPage.user_should_see(LoginPage.java:64)
+at ✽.user should see "success"(file:///Users/monty/eclipse-workspace/PracticeCucumber/src/test/resources/features/Login.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:26:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-12T12:26:57 EDT" duration-ms="5777" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[""]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test Login Cases"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:26:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-12T12:27:04 EDT" duration-ms="7775" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[""]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test Login Cases"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:27:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-12T12:27:14 EDT" duration-ms="9586" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[""]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test Login Cases"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:27:14 EDT" name="tearDownClass" finished-at="2026-05-12T12:27:18 EDT" duration-ms="3931" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@5c5eefef]" started-at="2026-05-12T12:30:39 EDT" name="tearDownClass" finished-at="2026-05-12T12:30:41 EDT" duration-ms="2147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
