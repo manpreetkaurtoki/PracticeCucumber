@@ -9,24 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,664</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">9,190</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1778603421154</td><td rowspan="1">17984</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1778787315048</td><td rowspan="1">6271</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Test Login Cases&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h2[text()=&apos; Secure Area&apos;], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[text()=&apos; Secure Area&apos;]&quot;}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.7.5&apos;, java.version: &apos;26.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.97 (6b3fa66a923a..., userDataDir: /var/folders/hp/xcf3qcdd4dl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59241}, goog:processID: 52591, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59241/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 880d32ed11501a29631da637a686c876
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at utils.WaitUtils.visibilityOfElementLocated(WaitUtils.java:32)
-	at utils.UiActionsUtils.getText(UiActionsUtils.java:11)
-	at pageclasses.SecureAreaPage.getText(SecureAreaPage.java:11)
-	at stepdefinitions.LoginPage.user_should_see(LoginPage.java:64)
-	at ✽.user should see &quot;success&quot;(file:///Users/monty/eclipse-workspace/PracticeCucumber/src/test/resources/features/Login.feature:19)
+<h2>Default test</h2><h3 id="m0">runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;&quot;</td><td>&quot;Table TestCases&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [Java] but found [Python]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepdefinitions.TestTableSteps.user_should_be_see_table_data(TestTableSteps.java:47)
+	at ✽.user should be see table data(file:///Users/monty/eclipse-workspace/PracticeCucumber/src/test/resources/features/Table.feature:11)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

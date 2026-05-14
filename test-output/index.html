@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;&quot;, &quot;Test Login Cases&quot;)">runScenario("", "Test Login Cases")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;&quot;, &quot;Table TestCases&quot;)">runScenario("", "Table TestCases")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,24 +126,19 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;&quot;, &quot;Test Login Cases&quot;)">
-                  </a> <!-- runScenario("", "Test Login Cases") -->
+                  <a name="runScenario(&quot;&quot;, &quot;Table TestCases&quot;)">
+                  </a> <!-- runScenario("", "Table TestCases") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("","Test Login Cases")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h2[text()=&apos; Secure Area&apos;], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[text()=&apos; Secure Area&apos;]&quot;}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.7.5&apos;, java.version: &apos;26.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.97 (6b3fa66a923a..., userDataDir: /var/folders/hp/xcf3qcdd4dl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59241}, goog:processID: 52591, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59241/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 880d32ed11501a29631da637a686c876
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at utils.WaitUtils.visibilityOfElementLocated(WaitUtils.java:32)
-	at utils.UiActionsUtils.getText(UiActionsUtils.java:11)
-	at pageclasses.SecureAreaPage.getText(SecureAreaPage.java:11)
-	at stepdefinitions.LoginPage.user_should_see(LoginPage.java:64)
-	at ✽.user should see &quot;success&quot;(file:///Users/monty/eclipse-workspace/PracticeCucumber/src/test/resources/features/Login.feature:19)
+                  <span class="parameters">("","Table TestCases")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Java] but found [Python]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepdefinitions.TestTableSteps.user_should_be_see_table_data(TestTableSteps.java:47)
+	at ✽.user should be see table data(file:///Users/monty/eclipse-workspace/PracticeCucumber/src/test/resources/features/Table.feature:11)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -155,7 +150,7 @@ Session ID: 880d32ed11501a29631da637a686c876
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/hp/xcf3qcdd4dl92yp7db5s93r40000gn/T/testng-eclipse-1166638179/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/hp/xcf3qcdd4dl92yp7db5s93r40000gn/T/testng-eclipse-1530047626/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -216,12 +211,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.TestRunner')
-data.setCell(0, 3, 17984);
+data.setCell(0, 3, 6271);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -249,18 +244,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@4cffcc61)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@7980cf2c)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("", "Test Login Cases")</span>
-                <span class="method-start">1470 ms</span>
+                <span class="method-name">runScenario("", "Table TestCases")</span>
+                <span class="method-start">1187 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">19467 ms</span>
+                <span class="method-start">7467 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

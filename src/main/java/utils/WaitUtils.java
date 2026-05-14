@@ -2,6 +2,7 @@ package utils;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -31,9 +32,15 @@ public class WaitUtils {
 	public static WebElement visibilityOfElementLocated(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
+
+	public static List<WebElement> visibilityOfAllElementsLocatedBy(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+	}
+
 	public static WebElement find(By locator) {
 		return DriverManager.getDriver().findElement(locator);
 	}
+
 	public static Actions actions() {
 		return new Actions(DriverManager.getDriver());
 	}

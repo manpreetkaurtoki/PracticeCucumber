@@ -5,12 +5,12 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-		features= "src/test/resources/features",
+		features= "src/test/resources/features/Table.feature",
 		glue = {"stepdefinitions","hooks"},
 		plugin = {"pretty",
 				"html:target/cucumber-report.html",
 				"json:target/report.json"},
-		tags = "@high",
+	
 		dryRun = false,
 		publish= true
 		
