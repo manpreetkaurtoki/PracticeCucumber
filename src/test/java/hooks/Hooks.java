@@ -35,7 +35,7 @@ public class Hooks {
 		DriverManager.initDriver();
 		DriverManager.getDriver();
 		WaitUtils.initWait();
-		DriverManager.goToUrl(BaseUtils.getConfigValue("url"));
+		//DriverManager.goToUrl(BaseUtils.getConfigValue("url"));
 	}
 
 	@After

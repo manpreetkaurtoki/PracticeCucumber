@@ -5,14 +5,13 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-		features= "src/test/resources/features/Table.feature",
+		features= "src/test/resources/features/Register.feature",
 		glue = {"stepdefinitions","hooks"},
 		plugin = {"pretty",
 				"html:target/cucumber-report.html",
 				"json:target/report.json"},
 	
-		dryRun = false,
-		publish= true
+		dryRun = false
 		
 		)
 public class TestRunner extends AbstractTestNGCucumberTests{

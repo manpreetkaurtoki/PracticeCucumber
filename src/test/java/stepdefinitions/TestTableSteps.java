@@ -27,7 +27,6 @@ public class TestTableSteps {
 		List<Map<String, String>> dataTableFeature = dataTable.asMaps(String.class, String.class);
 		for (Map<String, String> row : dataTableFeature) {
 
-
 			System.out.println("ID: " + row.get("ID"));
 			System.out.println("Course Name: " + row.get("Course Name"));
 			System.out.println("Language: " + row.get("Language"));
@@ -35,9 +34,13 @@ public class TestTableSteps {
 			System.out.println("Enrollments: " + row.get("Enrollments"));
 		}
 		
-		//Comparing UI and DataTable
-		for (int i = 0; i < dataTableFeature.size(); i++) {
+		System.out.println("Size of Testcase : " + allrows.size());
+		System.out.println("Size of Data Table : " + dataTableFeature.size());
+		Assert.assertEquals(allrows.size(), dataTableFeature.size());
 		
+		// Comparing UI and DataTable
+		for (int i = 0; i < dataTableFeature.size(); i++) {
+
 			List<WebElement> actualCol = allrows.get(i).findElements(By.tagName("td"));
 
 			Map<String, String> expected = dataTableFeature.get(i);
@@ -48,8 +51,6 @@ public class TestTableSteps {
 			Assert.assertEquals(actualCol.get(3).getText(), expected.get("Level"));
 			Assert.assertEquals(actualCol.get(4).getText(), expected.get("Enrollments"));
 		}
-		System.out.println("Size of Testcase : " + allrows.size());
-		System.out.println("Size of Data Table : " + dataTableFeature.size());
-		Assert.assertEquals(allrows.size(), dataTableFeature.size());
+
 	}
 }

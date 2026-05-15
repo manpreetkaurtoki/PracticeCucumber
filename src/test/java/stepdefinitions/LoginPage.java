@@ -5,8 +5,6 @@ import org.testng.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import manager.ExtentManager;
-import manager.ExtentTestManager;
 import pageclasses.LoginPageClass;
 import pageclasses.SecureAreaPage;
 import pageclasses.WelcomeToTheInternet;
@@ -18,7 +16,7 @@ public class LoginPage {
 
 	@Given("user is on xyz site")
 	public void user_is_on_xyz_site() {
-
+		
 	}
 
 	@When("user clicks on form auth")
@@ -52,13 +50,11 @@ public class LoginPage {
 	@Then("user should see {string}")
 	public void user_should_see(String result) {
 
-		
-
 		switch (result.toLowerCase()) {
 		case "failure":
 			System.out.println("Fail");
 			break;
-			
+
 		case "success":
 			secureObj = new SecureAreaPage();
 			Assert.assertEquals(secureObj.getText(), "Secure Area");

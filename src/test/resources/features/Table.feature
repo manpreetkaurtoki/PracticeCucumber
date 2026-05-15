@@ -12,7 +12,7 @@ Then user should be see table data
 
 
 |ID 		| 	Course Name 		|	Language|	Level 		|	Enrollments |
-|1517620		|	Selenium Framework	|   Java	|Advanced		|2667			|
+|1517620	|	Selenium Framework	|   Java	|Advanced		|2667			|
 |1693880	|	Selenium with Java	|   Java	|Beginner		|64284			|
 |1743612	|	XPath Locators		|  Any		|Beginner		|14762			|
 |1904956	|   Advanced Selenium	|  Java		|Intermediate	|16452			|

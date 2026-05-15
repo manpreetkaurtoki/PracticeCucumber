@@ -11,6 +11,7 @@ public class UiActionsUtils {
 		return WaitUtils.visibilityOfElementLocated(locator).getText();
 	}
 
+	
 	public static void enterText(By locator, String text) {
 
 		WaitUtils.visibilityOfElementLocated(locator).sendKeys(text);
