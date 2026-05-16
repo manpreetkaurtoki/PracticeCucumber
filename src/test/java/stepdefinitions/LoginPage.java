@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import org.testng.Assert;
 
+import dataprovider.ExcelDataProvider;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,7 +17,7 @@ public class LoginPage {
 
 	@Given("user is on xyz site")
 	public void user_is_on_xyz_site() {
-		
+
 	}
 
 	@When("user clicks on form auth")
@@ -53,11 +54,13 @@ public class LoginPage {
 		switch (result.toLowerCase()) {
 		case "failure":
 			System.out.println("Fail");
+			System.out.println(ExcelDataProvider.getLoginData());
 			break;
 
 		case "success":
 			secureObj = new SecureAreaPage();
 			Assert.assertEquals(secureObj.getText(), "Secure Area");
+			ExcelDataProvider.getLoginData();
 			break;
 
 		}
