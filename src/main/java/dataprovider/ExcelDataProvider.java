@@ -1,6 +1,7 @@
 package dataprovider;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import utils.ExcelUtils;
 
@@ -30,4 +31,14 @@ public class ExcelDataProvider {
 
 		return data;
 	}
+	
+	
+	@Test(dataProvider = "loginData")
+	public void loginTest(String usrname, String password)
+	{
+		System.out.println(usrname);
+		System.out.println(password);
+		
+	}
+	
 }
