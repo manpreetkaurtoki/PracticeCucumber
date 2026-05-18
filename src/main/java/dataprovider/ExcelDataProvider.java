@@ -26,19 +26,46 @@ public class ExcelDataProvider {
 				rowData += data[i - 1][j] + " ";
 				System.out.println(data[i - 1][j]);
 			}
-			System.out.println("Row-wise data : "+rowData);
+			System.out.println("Row-wise data : " + rowData);
 		}
 
 		return data;
 	}
-	
-	
+
+	@DataProvider(name = "courseData")
+	public static Object[][] getExcelCourseData() {
+
+		Object[][] data = null;
+
+		String path = "src/test/resources/testdata/CourseTableData.xlsx";
+
+		ExcelUtils excel = new ExcelUtils(path, "Sheet1");
+
+		int rows = excel.getRowCount();
+		int cols = excel.getColCount();
+
+		data = new Object[rows - 1][cols];
+		String rowData = "";
+		for (int i = 1; i < rows; i++) {
+
+			for (int j = 0; j < cols; j++) {
+
+				data[i - 1][j] = excel.getCellData(i, j);
+				rowData += data[i - 1][j] + " ";
+				System.out.println(data[i - 1][j]);
+			}
+			System.out.println("Row-wise data : " + rowData);
+		}
+
+		return data;
+	}
+
 	@Test(dataProvider = "loginData")
-	public void loginTest(String usrname, String password)
-	{
+	public void loginTest(String usrname, String password) {
 		System.out.println(usrname);
 		System.out.println(password);
-		
+
 	}
+
 	
 }
